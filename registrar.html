@@ -7,13 +7,22 @@
 <body>
 
 <form method="post" action="hello">
-    Ingresa el correo: <input name="ingresacorreo" type="text" /> <br>
+	Ingresa el correo: <input name="ingresacorreo" type="text" /> <br>
 
 
 	Ingresa tu contraseña: <input name="contrasena" type="password" /> <br>
 
+	
+	Seleccione tipo de usuario: 
 
-	Ingresa tipo de usuario: <input name="tipo" type="text" /> <br>
+<select name="tipo">
+   <option value="1">Conductor</option> 
+   <option value="2">Pasajero</option> 
+   <option value="3">Administrador</option>
+  
+</select>
+
+ <br>
 
 
 </form>
