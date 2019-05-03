@@ -18,10 +18,9 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        ServletOutputStream out = resp.getOutputStream();
-        out.write("hello heroku".getBytes());
-        out.flush();
-        out.close();
+       String ingresacorreo = request.getParameter("ingresacorreo");
+        String contrasena = request.getParameter("contrasena");
+        String tipo = request.getParameter("tipo");
     }
     
 }
