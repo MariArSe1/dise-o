@@ -20,11 +20,11 @@
 <h2>Registrar</h2>
 <form method="get" action="registro">
 <label>Correo
-<input type="text" id="corr" required autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+<input type="text" id="corr" name="ingresacorreo" required autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
 title="Debe seguir con el siguiente modelo: characters@characters.domain" required>
 </label>
 <label>Contraseña
-<input type="password" required autocomplete="off" id="psw" name="psw" 
+<input type="password" name="contrasena" required autocomplete="off" id="psw" name="psw" 
 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
  title="Debe contener por lo menos un número y una letra mayuscula y miniscula, y al menos 8 o más caracteres"
  required >
