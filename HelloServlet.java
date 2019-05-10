@@ -10,17 +10,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(
-        name = "MyServlet", 
-        urlPatterns = {"/hello"}
+        name = "registro", 
+        urlPatterns = {"/registro"}
     )
 public class HelloServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-       String ingresacorreo = request.getParameter("ingresacorreo");
-        String contrasena = request.getParameter("contrasena");
-        String tipo = request.getParameter("tipo");
+      Singleton tempo = Singleton.laconstructora();
+
+        tempo.add(request.getParameter("ingresacorreo"),request.getParameter("contrasena"),request.getParameter("tipo"))
+       
     }
     
 }
