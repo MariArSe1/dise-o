@@ -2,22 +2,39 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Registrar</title>
+<title>Ingresar</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-<BR><BR>
-<form method="post" action="hello1">
-    Ingresa el correo: <input name="ingresacorreo" type="text" /> <br><BR>
+
+<ul>
+  <li><a  class="active" >Ingresar</a></li>
+  <li><a href="registrar.html">Registar</a></li>
+</ul>
+<div id="container">
+<h1>Transportes S.A.</h1>
 
 
-	Ingresa tu contraseña: <input name="contrasena" type="password" /> <br><BR><HR>
+<div id="calculator">
+<h2>Ingresar</h2>
+<form>
+<label>Correo<br>
+<input type="text" id="correo" required autocomplete="off">
+</label>
+<label>Password<br>
+<input type="password" id="contraseña" required autocomplete="off">
+</label>
+<button type="button" id="ingresar" onclick="calculateTip" >Ingresar</button>
+
+
 
 </form>
 
-<button>
-<input type="submit" value="Ingresar"><BR><BR>
-<br>
-<br>
 
+</div>
+
+
+</div>
 </body>
 </html>
