@@ -1,0 +1,133 @@
+body{
+background: url("fondo.png");
+background-size: cover;
+color: #532827
+}
+#container{
+width: 400px;
+margin: 40px auto 0;
+padding: 40px;
+background: url(transporte.jpg);
+-webkit-border-radius:20;
+-moz-border-radius:20;
+text-align: center;
+box-sizing: border-box;
+box-shadow: 0 10px 15px -8px #000
+}
+h1{
+margin: 0 0 20px;
+padding:  0 0 20px;
+border-bottom: solid 1px #000; 
+}
+form{
+text-align: center;
+}
+form label{
+display: block;
+margin: 20px 0;
+font-weight: bold;
+}
+form input,
+form select{
+padding: 8px;
+margin: 10px 0;
+}
+form input[type="text"]{
+width: 90px;
+}
+button{
+background: #6c2726;
+color: white;
+border: none;
+border-bottom: solid 4px #222;
+text-transform: uppercase;
+font-size: 18px;
+padding: 20px 30px;
+width: 100%
+}
+button:hover{
+background: #4c2827;
+border-bottom color:#111;
+}
+button:active{
+position: relative;
+top: 1px;
+}
+#totaltip{
+font-size: 50px;
+top: 40px;
+}
+#totalTip sup{
+font-size: 24px;
+top: -18px;
+}
+#totalTipSmall{
+font-size: 14px;
+font-weight: bold;
+display: block;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
