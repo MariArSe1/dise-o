@@ -8,7 +8,7 @@ public class Singleton {
     private Singleton() {}
     ArrayList<Usuario> reservas = new ArrayList<Usuario>();
     Usuario u;
-    public static Singleton getInstance() {
+    public static Singleton laconstructora() {
         if (instanciaUnica == null) {
             instanciaUnica = new Singleton();
         }
