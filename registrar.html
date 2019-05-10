@@ -3,35 +3,126 @@
 <head>
 <meta charset="utf-8">
 <title>Registrar</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
+
 <body>
-
-<<BR><BR>
-<form method="get" action="hello">
-    Ingresa el correo: <input name="ingresacorreo" type="text" /> 
-
-<BR>    <br>
-
-
-	Ingresa tu contraseña: <input name="contrasena" type="password" /> 
-
-   <BR><br>
+<ul>
+  <li><a href="ingresar.html" >Ingresar</a></li>
+  <li><a class="active">Registar</a></li>
+</ul>
+<div id="container">
+<h1>Transportes S.A.</h1>
 
 
-	Seleccione tipo de usuario: 
-
-<select name="tipo">
+<div id="calculator">
+<h2>Registrar</h2>
+<form>
+<label>Correo
+<input type="text" id="corr" required autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+title="Debe seguir con el siguiente modelo: characters@characters.domain" required>
+</label>
+<label>Contraseña
+<input type="password" required autocomplete="off" id="psw" name="psw" 
+pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+ title="Debe contener por lo menos un número y una letra mayuscula y miniscula, y al menos 8 o más caracteres"
+ required >
+</label>
+Tipo Usuario
+<select id=tipe name="tipo">
    <option value="1">Conductor</option> 
    <option value="2">Pasajero</option> 
    <option value="3">Administrador</option>
   
 </select>
 
- <hr>
+<button  onclick="Registro" >Registar</button>
+
+
 
 </form>
-<button><BR><BR>
-<input type="submit" value="Registrar">
-<br>
+
+
+</div>
+<div id="message">
+  <h3>La contraseña debe tener lo siguiente:</h3>
+  <p id="letter" class="invalid">Una <b>letra</b> minuscula</p>
+  <p id="capital" class="invalid">Una <b>Letra</b> Mayuscula</p>
+  <p id="number" class="invalid">Un <b>numero</b></p>
+  <p id="length" class="invalid">Minimo <b>8 caracteres</b></p>
+</div>
+
+
+</div>
+
+<script>
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+var bellAmount = document.getElementById("corr");
+var serviceQuality = document.getElementById("tipe");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+
+
+</script>
+
+
+
 </body>
+
 </html>
+
